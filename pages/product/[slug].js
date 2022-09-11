@@ -30,6 +30,7 @@ const ProductDetailS = ({ product, products }) => {
             <div className='small-images-container'>
                {image?.map((item, i) => (
                   <img 
+                    key={i}
                     src={urlFor(item)}
                      className={i === index ? 'small-image selected-image' : 'small-image'}
                      onMouseEnter={() => setIndex(i)}
@@ -62,7 +63,7 @@ const ProductDetailS = ({ product, products }) => {
                  onClick={decQty}><AiOutlineMinus />
                  </span>
                  <span className='num' 
-                 onClick="">{qty}</span>
+                 >{qty}</span>
                  <span className='plus' 
                  onClick={incQty}><AiOutlinePlus />
                  </span>

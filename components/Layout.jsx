@@ -6,7 +6,7 @@ import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return (
-    <div className="layout">
+    <div className="layout col-12 px-4 py-3 px-md-5">
       <Head>
         <title>25Store</title>
       </Head>

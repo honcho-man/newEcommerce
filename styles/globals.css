@@ -22,15 +22,11 @@ margin: auto;
 width: 100%;
 
 }
-.layout{
-  padding: 10px;
-}
-
 .navbar-container{
   display: flex;
   justify-content: space-between;
-  margin: 6px 18px;
   position: relative;
+  padding: 30px 0px;
 }
 .marquee-text{
   font-size: 29px;
@@ -94,20 +90,15 @@ width: 100%;
   font-weight: 600;
 
 }
+
 .products-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-  width: 100%;
+  
 }
 .product-card{
- cursor: pointer;
+  cursor: pointer;
   transform: scale(1, 1);
   transition: transform 0.5s ease;
- color: #324d67;
-
+  color: #324d67;
 }
 .product-card:hover{
   transform: scale(1.1,1.1)
@@ -166,13 +157,10 @@ width: 100%;
 }
 .hero-banner-image{
   position: absolute;
-  top: 0%;
-  right:20%;
+  top: -45px;
+  right: 0;
   width: 450px;
-  height: 450px;
 }
-
-
 .desc{
 position: absolute;
 right: 10%;
@@ -211,7 +199,7 @@ text-align: end;
   font-weight: 200;
 }
 .footer-banner-container{
-  padding: 100px 40px;
+  padding: 60px 40px;
   background-color: #f02d34;
   border-radius: 15px;
   position: relative;
@@ -249,7 +237,8 @@ text-align: end;
   /* top: -35%;
   left: 8%; */
   top: -25%;
-  left: 25%;
+  left: 45%;
+  width: 450px;
 }
 .banner-desc .right{
   line-height: 1.4;
@@ -536,6 +525,10 @@ padding: 6px;
   border-right: 1px solid gray;
   color: #f02d34;
 }
+.quantity-desc .minus.unactive {
+  pointer-events: none;
+  opacity: 0.5;
+}
 .quantity-desc .num{
   border-right: 1px solid gray;
   font-size: 20px;
@@ -618,25 +611,33 @@ margin-top: 160px;
   margin-top: 10px;
 }
 
+.footer-banner-container .right {
+  position: relative;
+  z-index: 100;
+}
+
 @media screen and (max-width:800px) {
   .hero-banner-container{
     height: 560px;
   }
   .hero-banner-image{
-    width: 77%;
-    height: 62%;
-    top: -2%;
-    right: -6%;
+    width: 250px;
+    height: auto;
+    top: unset;
+    right: -6px;
+    bottom: 163px;
+    z-index: 0;
   }
   .footer-banner-container{
-    height: 560px;
-    margin-top: 80px;
+    height: 100%;
+    margin-top: 60px;
   }
   .footer-banner-image{
-    width: 77%;
-    left: 30%;
-    top: 6%;
-    height: 56%
+    width: 250px;
+    left: unset;
+    top: 74px;
+    right: 0;
+    z-index: 0;
   }
   .banner-desc .left h3{
     font-weight: 900;
